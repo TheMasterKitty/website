@@ -1,3 +1,4 @@
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -9,11 +10,8 @@
                 padding: 0;
                 font-family: Arial, sans-serif;
                 background-color: black;
-                background-size: cover;
-                background-image: url("https://images.pexels.com/photos/7245519/pexels-photo-7245519.jpeg");
-                backdrop-filter: blur(1.5px);
                 user-select: none;
-                
+                overflow: hidden;
             }
             .container {
                 display: flex;
@@ -44,6 +42,15 @@
             .button:hover {
                 background-color: #0056b3;
             }
+
+            #background-image {
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                width: 150%;
+                height: 150%;
+            }
         </style>
     </head>
     <body>
@@ -54,5 +61,17 @@
             </div>
             <div class="button-background"></div>
         </div>
+        <img id="background-image" src="https://images.pexels.com/photos/7245519/pexels-photo-7245519.jpeg" style="transform: translate(-25%, -25%);">
+        <script>
+            window.onmousemove = function(e) {
+                const x = e.clientX - (window.innerWidth / 2);
+                const y = e.clientY - (window.innerHeight / 2);
+                const angle = Math.atan2(y, x);
+                const cos = Math.cos(angle) * 5 - 25;
+                const sin = -Math.sin(angle) * 5 - 25;
+                
+                document.getElementById("background-image").style.transform = `translate(${cos}%, ${sin}%)`;
+            };
+        </script>
     </body>
 </html>
