@@ -1,77 +1,239 @@
-
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Golden Bot</title>
+        <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+            *
+            {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+            }
+            body 
+            {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+            }
+            section 
+            {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+            flex-wrap: wrap;
+            overflow: hidden;
+            }
+            section::before 
+            {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#000,rgb(167, 11, 11),#000);
+            animation: animate 5s linear infinite;
+            }
+            @keyframes animate 
+            {
+            0%
+            {
+                transform: translateY(-100%);
+            }
+            100%
+            {
+                transform: translateY(100%);
+            }
+            }
+            section span 
+            {
+            position: relative;
+            display: block;
+            width: calc(6.25vw - 2px);
+            height: calc(6.25vw - 2px);
+            background: #181818;
+            z-index: 2;
+            transition: 1.5s;
+            }
+            section span:hover 
+            {
+            background: rgb(167, 11, 11);
+            transition: 0s;
+            }
+        </style>
+        <title>TheMasterKitty's Porfolio</title>
         <style>
             body {
                 margin: 0;
-                padding: 0;
-                font-family: Arial, sans-serif;
-                background-color: black;
-                user-select: none;
-                overflow: hidden;
-            }
-            .container {
+                font-family: 'Gugi', Arial, sans-serif;
+                color: #ffffff;
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 height: 100vh;
+                user-select: none;
             }
-            .title {
-                font-size: 48px;
-                color: #ffcc00;
-                text-shadow: 0px 0px 10px #ffcc00;
+
+            p {
+                font-size: 18px;
             }
-            .button-container {
+
+            a {
+                text-decoration: none;
+                color: gold;
+                transition: 0.2s ease-in-out;
+            }
+
+            a:hover {
+                font-size: 19px;
+                color: rgb(255, 193, 38);
+            }
+
+            .container {
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -50%);
+                width: 600px;
+                height: 450px;
+                padding: 20px;
+                background-color: #134b65;
+                border-radius: 15px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+                overflow: hidden;
+                z-index: 5;
+            }
+
+            .tabs {
+                display: flex;
+                justify-content: center;
                 margin-top: 30px;
             }
-            .button {
-                font-size: 24px;
-                padding: 15px 40px;
-                background-color: #007bff;
-                border: none;
-                color: #fff;
-                border-radius: 8px;
+
+            .tab {
                 cursor: pointer;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                width: 20px;
+                height: 20px;
+                background-color: #ffffff;
+                border-radius: 50%;
+                margin: 0 10px;
+                transition: 0.3s ease-in-out;
             }
 
-            .button:hover {
-                background-color: #0056b3;
+            .tab:hover {
+                background-color: #0077b5;
+                scale: 1.6;
+            }
+            
+            .tab:active {
+                background-color: rgb(37, 235, 57);
             }
 
-            #background-image {
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                left: 0;
-                width: 150%;
-                height: 150%;
+            .content {
+                margin-top: 30px;
+                transition: opacity 0.5s ease-in-out;
+            }
+
+            .profile-pic {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin: 0 auto;
+                display: block;
+            }
+
+            @keyframes fade {
+                0% {
+                    opacity: 1.0;
+                }
+                50% {
+                    opacity: 0.0;
+                }
+                100% {
+                    opacity: 1.0;
+                }
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <h1 class="title">Golden Bot</h1>
-            <div class="button-container">
-                <button class="button" onclick="window.open(`https://discord.com/api/oauth2/authorize?client_id=1125568711923863674&permissions=8&scope=bot`)">Add to Server</button>
+        <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+            <div class="container">
+                <div class="tabs">
+                    <div class="tab" title="About Me" id="aboutTab" onclick="showTab('about')"></div>
+                    <div class="tab" title="Coding Experience" id="codingTab" onclick="showTab('coding')"></div>
+                    <div class="tab" title="Management Experience" id="managementTab" onclick="showTab('management')"></div>
+                </div>
+
+                <div class="content">
+                    <div id="about" style="display: block;">
+                        <img src="https://yt3.ggpht.com/H7F47k1yo1L8HzVxqLWus3iv7-m4_Six0TXqTuGoATlKr1yjtuSk06NVPxADvhYCgU9SAoPJuA=s108-c-k-c0x00ffffff-no-rj" alt="Your Name" class="profile-pic">
+                        <h2>TheMasterKitty</h2>
+                        <p>Hey 👋! I'm a young developer & Discord server manager! I mainly code in <a href="https://hub.spigotmc.org/" target="_blank">SpigotMC</a>, but also code in <a href="https://discord.js.org/" target="_blank">discord.js</a>, <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML + CSS + JS</a>, <a href="https://nodejs.org" target="_blank">Node.js</a>, and many more! I do a bunch of random stuff like coding Minecraft SMP twists/plugins, managing Discord servers, and more!<br>Contact Me via Discord: themasterkitty / <a href="https://discordapp.com/users/998301295834300427" target="_blank">Click Here</a></p>
+                    </div>
+
+                    <div id="coding" style="display:none;">
+                        <h2>Coding Experience</h2>
+                        <p>I do a lot of plugin developing, mainly for SMPs - but also a bunch of random stuff! Here's a list:<br>
+                            <ul style="align-items: center; display: flex; justify-content: center; flex-wrap: wrap; flex-direction: column;">
+                                <li>I coded the plugin for <a href="https://discord.gg/PbcQMwEwAc" target="_blank">Ore SMP</a></li>
+                                <li>I also coded the plugin for <a href="https://discord.gg/kK7GhuvQ6v" target="_blank">AnimaSMP</a></li>
+                                <li>I made the plugin for <a href="https://discord.gg/85Xbgt6Y3j" target="_blank">Netherite SMP</a></li>
+                                <li>I am a developer for <a href="https://discord.gg/er9qNv6ejr" target="_blank">HydenMC</a></li>
+                                <li>I am also a plugin developer for <a href="https://discord.gg/immune" target="_blank">Immune SMP</a></li>
+                            </ul>
+                        </p>
+                        
+                    </div>
+
+                    <div id="management" style="display:none;">
+                        <h2>Management Experience</h2>
+                        <p>I do a good bit of managing/administrating YouTuber's/peoples discords! Here's a list of ones I manage:<br>
+                            <ul style="align-items: center; display: flex; justify-content: center; flex-wrap: wrap; flex-direction: column;">
+                                <li><a href="https://discord.gg/ScdA3DXyys" target="_blank">colly's promised land 🌸</a></li>
+                                <li><a href="https://discord.gg/rkMu48FVAZ" target="_blank">Arch's Archway</a></li>
+                                <li><a href="https://discord.gg/tgc6pJzPcP" target="_blank">The Lomagang Hideout</a></li>
+                                <li><a href="https://discord.gg/KEebverbyh" target="_blank">Lanfy's Lounge</a></li>
+                                <li><a href="https://discord.gg/7vvZ6thq4v" target="_blank">Skillett's Hangout Club</a></li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="button-background"></div>
-        </div>
-        <img id="background-image" src="https://images.pexels.com/photos/7245519/pexels-photo-7245519.jpeg" style="transform: translate(-25%, -25%);">
+        </section>
+
         <script>
-            window.onmousemove = function(e) {
-                const x = e.clientX - (window.innerWidth / 2);
-                const y = e.clientY - (window.innerHeight / 2);
-                const angle = Math.atan2(y, x);
-                const cos = Math.cos(angle) * 5 - 25;
-                const sin = -Math.sin(angle) * 5 - 25;
-                
-                document.getElementById("background-image").style.transform = `translate(${cos}%, ${sin}%)`;
-            };
+            function showTab(tabId) {
+                document.querySelector(".content").style.animationName = "fade";
+                document.querySelector(".content").style.animationDuration = "0.65s";
+                setTimeout(() => {
+                    document.querySelector(".content").style.animationName = "";
+                    document.querySelector(".content").style.animationDuration = "";
+                }, 650);
+                setTimeout(() => {
+                    const tabs = ['about', 'coding', 'management'];
+                    let found = false;
+                    tabs.forEach(tab => {
+                        const tabContent = document.getElementById(tab);
+                        if (tab === tabId) {
+                            tabContent.style.display = 'block';
+                            found = true;
+                        }
+                        else {
+                            tabContent.style.display = 'none';
+                        }
+                    });
+                }, 325);
+            }
         </script>
     </body>
 </html>
