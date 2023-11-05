@@ -136,7 +136,7 @@
                 transition: 0.3s ease-in-out;
             }
 
-            .tab selected {
+            .selected {
                 background-color: green;
             }
 
@@ -241,7 +241,7 @@
                         const tabContent = document.getElementById(tab);
                         if (tab === tabId) {
                             document.getElementsByClassName("tab selected")[0].classList.remove("selected");
-                            document.getElementsById(tab + "Tab").classList.add("selected");
+                            document.getElementById(tab + "Tab").classList.add("selected");
                             tabContent.style.display = 'block';
                         }
                         else {
