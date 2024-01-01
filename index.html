@@ -1,258 +1,524 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" href="/favicon.gif">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-            *
-            {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Quicksand', sans-serif;
-            }
-            body 
-            {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.gif">
+    <meta content="TheMasterKitty's Mod & Dev Resume" property="og:title" />
+    <meta content="List of all my places I've been a mod/dev, very cool!" property="og:description" />
+    <meta content="#3fa7ed" data-react-helmet="true" name="theme-color" />
+    <meta content="https://themasterkitty.net/" property="og:url" />
+    <meta content="https://themasterkitty.net/favicon.gif" property="og:image" />
+
+    <script defer src="script.js"></script>
+
+    <title>TheMasterKitty's Portfolio</title>
+    
+    <style> 
+    ::-webkit-scrollbar {
+            display: none;
+        }
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    body {
+        background-image: url(img/background.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: 'Poppins', sans-serif;
+        height: 4900px;
+    }
+    
+    #scrollToDivBtn:hover {
+            cursor: pointer;
+            /* Change to the desired cursor style, e.g., 'pointer' */
+        }
+
+        .scroll {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(41, 115, 115, 0.14);
+            border-radius: 100px;
+            border: 1px solid #ffffff33;
+            backdrop-filter: blur(10px);
+            margin-top: auto;
+            margin-bottom: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            background: #000;
-            }
-            section 
-            {
-            position: absolute;
-            width: 100vw;
+        }
+        .intro {
+            width: auto;
             height: 100vh;
-            display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 2px;
-            flex-wrap: wrap;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .nameplate {
+            
+            margin-left: 10px;
             overflow: hidden;
-            }
-            section::before 
-            {
-            content: '';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 130px;
+            height: 100.1vh;
+            min-width: 200px;
+            position: fixed;
+            /* transform: translateX(-100%); */
+            
+            margin: -10px;
+            padding: 0px;
+            background-color: #01080E;
+            
+        }
+        .pfpoverlay {
             position: absolute;
+            top: 10px;
+            width: 7vw;
+            border-radius: 300px;
+            margin-top: 50px;
+            margin-left: 10px;
+        }
+        .sidewayswriting {
+            transform: rotate(-90deg);
+            text-orientation: mixed;
+            font-size: 9vh;
+            font-weight: 700;
+            color: white;
+            margin-top: 200px;
+            margin-left: 0px;
+            color: rgba(218, 242, 242, 0.57);
+            text-align: center;
+            text-shadow: 0px 0px 97.69999694824219px rgba(58, 148, 153, 0.33);
+            font-family: Poppins;
+            font-size: 87px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .masterspan{
+            color: #DAF2F2;
+            font-family: Poppins;
+            font-size: 87px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .contentborder {
+            width: calc(100vw - 300px);
+            height: calc(100vh - 110px);
+            padding: 30px;
+            display: flex;
+            border-radius: 40px;
+            border: 20px solid #01080E;
+            position: absolute;
+            top: 0px;
+            left: 170px;
+            /* draw box shadows to fill the outside of all 4 edges */
+            box-shadow: 0 0 0 100vmax #01080E;
+        }
+        .contentborders{
+            position: fixed;
+        }
+        .contentdiv1{
             width: 100%;
             height: 100%;
-            background: linear-gradient(#000,rgb(116, 195, 249),#000);
-            animation: animate 5s linear infinite;
-            }
-            @keyframes animate 
-            {
-            0%
-            {
-                transform: translateY(-100%);
-            }
-            100%
-            {
-                transform: translateY(100%);
-            }
-            }
-            section span 
-            {
-            position: relative;
-            display: block;
-            width: calc(6.25vw - 2px);
-            height: calc(6.25vw - 2px);
-            background: #181818;
-            z-index: 2;
-            transition: 1.5s;
-            }
-            section span:hover 
-            {
-            background: rgb(61, 165, 234);
-            transition: 0s;
-            }
-        </style>
-        <title>TheMasterKitty's Porfolio</title>
-        <meta content="TheMasterKitty's Mod & Dev Resume" property="og:title" />
-        <meta content="List of all my places I've been a mod/dev, very cool!" property="og:description" />
-        <meta content="#3fa7ed" data-react-helmet="true" name="theme-color" />
-        <meta content="https://themasterkitty.net/" property="og:url" />
-        <meta content="https://themasterkitty.net/favicon.gif" property="og:image" />
-        <style>
-            body {
-                margin: 0;
-                font-family: 'Gugi', Arial, sans-serif;
-                color: #ffffff;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                user-select: none;
-            }
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            margin-left: 15%;
+            margin-top: -2%;
+            flex-direction: column;
+        }
+        .subtext{
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 39px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+        .dsuhfdsiudfhniuh{
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        .fdsuzhdasuzif{
+            color: rgba(255, 255, 255, 0.47);
+            font-family: Poppins;
+            font-size: 27px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            max-width: 800px;
+        }
+        .ngcacshncufhgfiufd{
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 27px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        .headline{
+            color: rgba(255, 255, 255, 0.81);
+            text-align: left;
+            font-family: Poppins;
+            font-size: 95px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .subtext2{
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            max-width: 60vw;
+            margin-top: 20px;
+            margin-bottom: 20px;
 
-            p {
-                font-size: 18px;
-            }
-
-            a {
-                text-decoration: none;
-                color: gold;
-                transition: 0.2s ease-in-out;
-            }
-
-            a:hover {
-                font-size: 19px;
-                color: rgb(255, 193, 38);
-            }
-
-            .container {
-                text-align: center;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-right: -50%;
-                transform: translate(-50%, -50%);
-                width: 600px;
-                height: 450px;
-                padding: 20px;
-                background-color: #134b65;
-                border-radius: 15px;
-                box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-                overflow: hidden;
-                z-index: 5;
-            }
-
-            .tabs {
-                display: flex;
-                justify-content: center;
-                margin-top: 30px;
-            }
-
-            .tab {
-                cursor: pointer;
-                width: 20px;
-                height: 20px;
-                background-color: #ffffff;
-                border-radius: 50%;
-                margin: 0 10px;
-                transition: 0.3s ease-in-out;
-            }
-
-            .selected {
-                background-color: #23d953;
-            }
-
-            .tab:hover {
-                background-color: #0077b5;
-                scale: 1.6;
-            }
+        }
+        .jobtabletabletabletable{
+            width: 100%;
+            max-width: 50vw;
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        .alignleft{
+            text-align: left;
+        }
+        .alignright{
+            text-align: right;
+        }
+        .discordicon{
+            background-image: url(img/Group.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            margin-left: 10px;
+            color: transparent !important;
+        }
+        .borderedtextbubble{
+            border-radius: 54px;
+            border: 1px solid #048686;
+            background: #02383F;
+            margin-left: 10px;
+            margin-right: 10px;
+            position: relative; /* Add this line */
+    top: -2px; /* Add this line */
+            font-size: 13px;
+            padding: 3px 10px 3px 10px;
             
-            .tab:active {
-                background-color: rgb(63, 167, 237);
-            }
+        }
+        .greyedouttext{
+            color: rgba(255, 255, 255, 0.30);
+            
+            font-family: Poppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-right: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #FFF;
+        }
+        .discordatbubble{
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            border-radius: 16px;
+            border: 1px solid #048686;
+            background: #02383F;
+            margin-left: 10px;
+            padding: 5px 10px 5px 10px;
+        }
+        .subtext3{
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 41px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        .price {
+            color: #FFF;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 31px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        .pricedescriptiob{
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 31px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            
+            text-align: center;
+            
+        }
+        .fatbox{
+            border-radius: 18px;
+            border: 1px solid #048686;
+            background: rgba(2, 56, 63, 0.71);
+            backdrop-filter: blur(9.149999618530273px);
+            width: 100%;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            
+            
+            
+        }
+        .priceflexgap{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            width: 100%;
+            max-width: 60vw;
+        }
+        .titeffect{
+            background: linear-gradient(90deg, #4DBAC5 -0.3%, #297373 100.06%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 0px 97.69999694824219px rgba(58, 148, 153, 0.33));
+        }
+        .navdot{
+            width: 25px;
+            height: 25px;
+            border-radius: 100px;
+            background-color: #FFFFFF2B;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            z-index: 100;
+            position: relative;
+            cursor: pointer;
+        }
+        .navdots{
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .navdotactive{
+            width: 25px;
+            height: 25px;
+            border-radius: 100px;
+            background-color: #ffffff;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            z-index: 100;
+            position: relative;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <img src="img/themasterkittypfp.png" style=" width: 125px; border-radius: 300px; margin-top: auto;">
+        <a style="font-weight: 700; font-size: 75px; " class="titeffect">TheMasterKitty</a>
+        <a style="margin-top: -10px; color: white; font-weight: 600; font-size: 35px;text-align: center;">👋Hey!</a>
+        <a style="margin-top: 10px; color: white; font-weight: 500; font-size: 20px;text-align: center;">I'm a young
+            developer & Discord server manager!</a>
+        <div class="scroll" id="scrollToDivBtn" onclick="scrollToDiv('contentdiv1')">
+            <img src="img\arrowicon.svg">
+        </div>
+    </div>
+    <div class="content">
+        <div class="contentborders" style="opacity: 0;" id="conboarders">
+            
+            <div class="contentborder">
 
-            .content {
-                margin-top: 30px;
-                transition: opacity 0.5s ease-in-out;
-            }
-
-            .profile-pic {
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                margin: 0 auto;
-                display: block;
-            }
-
-            @keyframes fade {
-                0% {
-                    opacity: 1.0;
-                }
-                50% {
-                    opacity: 0.0;
-                }
-                100% {
-                    opacity: 1.0;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
-            <div class="container">
-                <div class="tabs">
-                    <div class="tab selected" title="About Me" id="aboutTab" onclick="showTab('about')"></div>
-                    <div class="tab" title="Coding Experience" id="codingTab" onclick="showTab('coding')"></div>
-                    <div class="tab" title="Management Experience" id="managementTab" onclick="showTab('management')"></div>
+                <div class="contentdiv1" id="contentdiv1"><div class="headline">
+                    ABOUT ME
                 </div>
-
-                <div class="content">
-                    <div id="about" style="display: block;">
-                        <img src="/favicon.gif" alt="TheMasterKitty's PFP" title="TheMasterKitty" class="profile-pic">
-                        <h2>TheMasterKitty</h2>
-                        <p>Hey 👋! I'm a young developer & Discord server manager! I mainly code in <a href="https://hub.spigotmc.org/" target="_blank">SpigotMC</a>, but also code in <a href="https://discord.js.org/" target="_blank">discord.js</a>, <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML + CSS + JS</a>, <a href="https://nodejs.org" target="_blank">Node.js</a>, and many more! I do a bunch of random stuff like coding Minecraft SMP twists/plugins, managing Discord servers, and more!<br>Contact Me via Discord: themasterkitty / <a href="https://discordapp.com/users/998301295834300427" target="_blank">Click Here</a></p>
-                    </div>
-
-                    <div id="coding" style="display:none;">
-                        <h2>Coding Experience</h2>
-                        <p>I do a lot of plugin developing, mainly for SMPs/smp plugins - but also a bunch of random stuff! Here's a list:<br>
-                            <ul style="align-items: center; display: flex; justify-content: center; flex-wrap: wrap; flex-direction: column;">
-                                <li><a href="https://discord.gg/PbcQMwEwAc" target="_blank">Ore SMP</a> - Private SMP Plugin Dev</li>
-                                <li><a href="https://discord.gg/ThD4WBQnKt" target="_blank">Spiral SMP</a> - Private SMP Plugin Dev</li>
-                                <li>AnimaSMP (server shut down) - Private SMP Plugin Dev</li>
-                                <li><a href="https://discord.gg/85Xbgt6Y3j" target="_blank">Netherite SMP</a> - Private SMP Plugin Dev/Owner</li>
-                                <li><a href="https://discord.gg/immune" target="_blank">Immune SMP</a> - Retired Private SMP Plugin Dev</li>
-                                <li><a href="https://discord.gg/vUx73MgDWa" target="_blank">Ore SMP Public</a> - Public SMP Dev</li>
-                                <li><a href="https://discord.gg/er9qNv6ejr" target="_blank">HydenMC</a> - Public SMP Dev (retired)</li>
-                                <li><a href="https://discord.gg/RyRbNzRsUs" target="_blank">Lifeneal</a> - Public SMP Dev</li>
-                                <li>Cobnet (no public discord yet)</li>
-                            </ul>
-                        </p>
-                        
-                    </div>
-
-                    <div id="management" style="display:none;">
-                        <h2>Management Experience</h2>
-                        <p>I do a good bit of managing/administrating YouTuber's/peoples discords! Here's a list of ones I was/am staff for:<br>
-                            <ul style="align-items: center; display: flex; justify-content: center; flex-wrap: wrap; flex-direction: column;">
-                                <li><a href="https://discord.gg/ScdA3DXyys" target="_blank">colly's promised land 🌸</a> - Mod</li>
-                                <li><a href="https://discord.gg/rkMu48FVAZ" target="_blank">Arch's Archway</a> - Manager (retired)</li>
-                                <li><a href="https://discord.gg/lomedy" target="_blank">The Lomagang Hideout</a> - Manager (retired)</li>
-                                <li><a href="https://discord.gg/sharkilz" target="_blank">The Sharkilz Fish Tank</a> - Manager (retired)</li>
-                                <li><a href="https://discord.gg/KEebverbyh" target="_blank">Lanfy's Lounge</a> - Admin</li>
-                                <li><a href="https://discord.gg/wg9EWfYYj4" target="_blank">NickofPlayzYT's Official Server</a> - Manager</li>
-                                <li><a href="https://discord.gg/bvXU3u7B6Q" target="_blank">Cevlo's Circle</a> - Manager (retired)</li>
-                                <li><a href="https://discord.gg/7vvZ6thq4v" target="_blank">Skillett's Hangout Club</a> - Admin (retired)</li>
-                                <li>InfuseSMP Public Minecraft & Discord - Jr. Admin (retired: server was shut down)</li>
-                            </ul>
-                        </p>
-                    </div>
+                <div class="subtext">
+                    👋 Hey!
+                    <br>
+                    <span class="dsuhfdsiudfhniuh">I'm a young developer & Discord server manager!</span>
+    
+                </div>
+                <div class="fdsuzhdasuzif">
+                    I mainly code in <span class="ngcacshncufhgfiufd">SpigotMC</span>, but also code in <span class="ngcacshncufhgfiufd">discord.js</span>, <span class="ngcacshncufhgfiufd">HTML</span> + <span class="ngcacshncufhgfiufd">CSS</span> + <span class="ngcacshncufhgfiufd">JS</span>, <span class="ngcacshncufhgfiufd">Node.js</span>, and many more! I do a bunch of random stuff like coding <span class="ngcacshncufhgfiufd">Minecraft SMP twists</span>/<span class="ngcacshncufhgfiufd">plugins</span>, managing <span class="ngcacshncufhgfiufd">Discord servers</span>, and more!
                 </div>
             </div>
-        </section>
 
-        <script>
-            function showTab(tabId) {
-                document.querySelector(".content").style.animationName = "fade";
-                document.querySelector(".content").style.animationDuration = "0.65s";
-                setTimeout(() => {
-                    document.querySelector(".content").style.animationName = "";
-                    document.querySelector(".content").style.animationDuration = "";
-                }, 650);
-                setTimeout(() => {
-                    const tabs = ['about', 'coding', 'management'];
-                    let found = false;
-                    tabs.forEach(tab => {
-                        const tabContent = document.getElementById(tab);
-                        if (tab === tabId) {
-                            document.getElementsByClassName("tab selected")[0].classList.remove("selected");
-                            document.getElementById(tab + "Tab").classList.add("selected");
-                            tabContent.style.display = 'block';
-                        }
-                        else {
-                            tabContent.style.display = 'none';
-                        }
-                    });
-                }, 325);
-            }
-        </script>
-    </body>
+
+                <div class="contentdiv1" id="contentdiv2">
+                    <div class="headline">
+                        DEVELOPMENT
+                    </div>
+                    <div class="subtext2">
+                        Most of my time is spent working on developing plugins mainly for SMPs but when I’m not making plugins I’m developing other aspects of SMPs!
+                    </div>
+                    <div class="jobtable">
+                        <table class="jobtabletabletabletable">
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>Ore SMP <span class="borderedtextbubble">Private</span></th>
+                                <th class="alignright"><span class="greyedouttext">SMP</span>Plugin Dev</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>Spiral SMP<span class="borderedtextbubble">Private</span></th>
+                                <th class="alignright"><span class="greyedouttext">SMP</span>Plugin Dev</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>AnimaSMP <span class="borderedtextbubble">Private</span><span class="borderedtextbubble" style="margin-left: 0px;">SHUT DOWN</span></th>
+                                <th class="alignright"><span class="greyedouttext">SMP</span>Plugin Dev</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>NetheriteSMP <span class="borderedtextbubble">Private</span></th>
+                                <th class="alignright"><span class="greyedouttext">SMP</span>Plugin Dev + Owner</th>
+                            </tr><tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>Immune SMP <span class="borderedtextbubble">Private</span></th>
+                                <th class="alignright"><span class="borderedtextbubble">Retired</span><span class="greyedouttext">SMP</span>Plugin Dev</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>Ore SMP <span class="borderedtextbubble">Public</span></th>
+                                <th class="alignright"><span class="greyedouttext">SMP</span> Dev</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>HydenMC <span class="borderedtextbubble">Public</span></th>
+                                <th class="alignright"><span class="borderedtextbubble">Retired</span><span class="greyedouttext">SMP</span> Dev</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>Liefeneal <span class="borderedtextbubble">Public</span></th>
+                                <th class="alignright"><span class="greyedouttext">SMP</span> Dev</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>Cobnet <span class="borderedtextbubble">Not Public Yet</span></th>
+                                <th class="alignright"><span class="greyedouttext">---</span> </th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="contentdiv1" id="contentdiv3">
+                    <div class="headline">
+                        MANAGEMENT
+                    </div>
+                    <div class="subtext2">
+                        I do a good bit of managing/administrating Youtuber’s/people’s discords! Here’s a list of ones I was/am staff for:
+                    </div>
+                    <div class="jobtable">
+                        <table class="jobtabletabletabletable">
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>Colly’s Promised Land 🌸  </th>
+                                <th class="alignright">  Moderator</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>Arch’s Archway </th>
+                                <th class="alignright"><span class="borderedtextbubble">Retired</span>  Manager</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>The Lomagang Hideout  </th>
+                                <th class="alignright"><span class="borderedtextbubble">Retired</span>  Manager</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>The Sharkilz Fish Tank  </th>
+                                <th class="alignright"><span class="borderedtextbubble">Retired</span>  Manager</th>
+                            </tr><tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>Lanfy’s Lounge </th>
+                                <th class="alignright">  Admin</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>NickofPlayzYT’s Official Server </th>
+                                <th class="alignright">  Manager</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>Cevlo’s Circle </th>
+                                <th class="alignright"><span class="borderedtextbubble">Retired</span>   Manager</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>Skillett’s Hangout Club </th>
+                                <th class="alignright"> <span class="borderedtextbubble">Retired</span>  Admin</th>
+                            </tr>
+                            <tr>
+                                <th class="alignleft"><span class="discordicon"><a href="google.com">⠀⠀</a></span>InfuseSMP Discord  <span class="borderedtextbubble">SHUT DOWN</span></th>
+                                <th class="alignright"><span class="borderedtextbubble">Retired</span> Jr.Admin</th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="contentdiv1" id="contentdiv4">
+                    <div class="headline">
+                        CONTACT ME
+                    </div>
+                    <div class="subtext2">
+                        Contact me via Discord <span class="discordatbubble">@themasterkitty</span>
+                    </div>
+                    <div class="subtext3">
+                        Interested in a plugin? 
+                    </div>
+                    <div class="priceflexgap">
+                       
+                                <div class="fatbox" style="padding-top: 40px;"> <div class="price">5$</div> <div class="pricedescriptiob">Small Plugins</div> </div>
+                                <div class="fatbox"> <div class="price">10$</div> <div class="pricedescriptiob">Regular SMP 
+                                    <br>Plugins</div> </div>
+                                <div class="fatbox"> <div class="price">15-20$</div> <div class="pricedescriptiob">Large SMP <br>Plugins</div> </div>
+                                
+                            
+                    </div>
+                </div>
+
+
+            
+            </div>
+            <div class="nameplate">
+                <img src="img/themasterkittypfp.png" class="pfpoverlay">
+                <div class="sidewayswriting">The<span class="masterspan">Master</span>Kitty</div>
+            </div>
+            <div class="navdots">
+                <div class="navdot" onclick="scrollToDiv('contentdiv1')"></div>
+                <div class="navdot" onclick="scrollToDiv('contentdiv2')"></div>
+                <div class="navdot" onclick="scrollToDiv('contentdiv3')"></div>
+                <div class="navdot" onclick="scrollToDiv('contentdiv4')"></div>
+            </div>
+            <div class="navdots">
+                <div class="navdotactive" onclick="scrollToDiv('contentdiv1')" id="navdotcd1"></div>
+                <div class="navdotactive" onclick="scrollToDiv('contentdiv2')" id="navdotcd2"></div>
+                <div class="navdotactive" onclick="scrollToDiv('contentdiv3')" id="navdotcd3"></div>
+                <div class="navdotactive" onclick="scrollToDiv('contentdiv4')" id="navdotcd4"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
 </html>
